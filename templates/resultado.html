@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cotización de ventana - Resultado</title>
+  </head>
+  <body>
+    <h1>Cotización de ventana - Resultado</h1>
+    <p>Estilo: {{ estilo }}</p>
+    <p>Acabado: {{ acabado }}</p>
+    <p>Tipo de vidrio: {{ vidrio_tipo }}</p>
+    {% if esmerilado %}
+      <p>Vidrio esmerilado (+60%): Sí</p>
+    {% else %}
+      <p>Vidrio esmerilado (+60%): No</p>
+    {% endif %}
+    <p>Cantidad: {{ cantidad }}</p>
+    <p>Costo total: ${{ costo_total }}</p>
+  </body>
+</html>

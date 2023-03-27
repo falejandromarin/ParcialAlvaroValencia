@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digimon API con Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Consumo de API Digimon Alejandro</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Imagen</th>
+                    <th>Nivel</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for digimon in digimon_data %}
+                <tr>
+                    <td>{{ digimon.name }}</td>
+                    <td><img src="{{ digimon.img }}" alt="{{ digimon.name }}" width="100"></td>
+                    <td>{{ digimon.level }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
